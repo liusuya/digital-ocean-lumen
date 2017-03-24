@@ -13,7 +13,9 @@ Mongoid.load!("#{PADRINO_ROOT}/config/mongoid.yml")
 Mongoid.raise_not_found_error = false
 Mongoid.logger.level = Logger::INFO
 Mongo::Logger.logger.level = Logger::INFO
-Padrino::Logger::Config[:development][:stream] = :to_file
+
+#logs/app-development.txt is where to find our logs ... we hope.
+Padrino::Logger::Config[:development][:log_path] = 'logs/app-development.txt'
 Padrino.load!
 
 Delayed::Worker.max_attempts = 1

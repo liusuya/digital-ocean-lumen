@@ -173,7 +173,7 @@ ssh-keygen -f ~/.ssh/id_rsa -t rsa -N ''
 cat ~/.ssh/id_rsa.pub | sshcommand acl-add dokku root
 ssh-keyscan localhost >> ~/.ssh/known_hosts
 cd ~
-git clone https://github.com/wordsandwriting/lumen.git
+git clone https://github.com/testgaiabot/digital-ocean-lumen/master/lumen.git
 cd lumen
 git remote add $APP_NAME dokku@localhost:$APP_NAME
 git push $APP_NAME master
